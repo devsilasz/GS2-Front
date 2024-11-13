@@ -1,0 +1,70 @@
+// Variáveis para cores com tom escuro e azul
+$cor-fundo-escuro: #121212;      // Fundo escuro (modo dark)
+$cor-azul-escuro: #1f2a44;       // Azul escuro suave para destacar elementos
+$cor-azul-claro: #3e5c76;        // Azul médio para botões e interações
+$cor-texto-claro: #e0e0e0;       // Texto claro para boa legibilidade
+$cor-destaque: #4f77a2;          // Azul suave para destaques
+$padding-section: 4rem 2rem;      // Padding das seções
+
+// Estilos gerais de seção
+.section {
+  padding: $padding-section;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $cor-texto-claro;
+  background-color: $cor-fundo-escuro; // Fundo escuro geral (modo dark)
+
+  .conteudo {
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.7); // Sobreposição escura para destacar o conteúdo
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Sombras suaves para profundidade
+  }
+}
+
+// Seção alinhada à esquerda (azul escuro suave)
+.esquerda {
+  background-color: $cor-azul-escuro; // Azul escuro suave para a seção da esquerda
+  justify-content: flex-start; // Alinhado à esquerda
+  .conteudo {
+    text-align: left;
+  }
+}
+
+// Seção alinhada à direita (azul médio suave)
+.direita {
+  background-color: $cor-azul-claro; // Azul médio suave para a seção da direita
+  justify-content: flex-end; // Alinhado à direita
+  .conteudo {
+    text-align: right;
+  }
+}
+
+// Estilo de botões e links
+.btn-primaria {
+  background-color: $cor-destaque; // Azul suave para os botões
+  color: $cor-texto-claro;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $cor-azul-claro; // Azul médio para hover
+  }
+}
+
+// Ajuste responsivo para telas menores
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+    .conteudo {
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+}
