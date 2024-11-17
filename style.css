@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .section {
   padding: 4rem 2rem;
   display: flex;
@@ -79,6 +80,32 @@
   right: 0;
   bottom: 0;
   z-index: 1;
+}
+
+.navbar {
+  background-color: #003366; /* Azul escuro, moderno e sofisticado */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: white !important; /* Para manter os links em branco */
+}
+
+.navbar .navbar-toggler-icon {
+  background-color: white; /* Cor do ícone do menu */
+}
+
+footer {
+  background-color: #2c3e50; /* Cinza escuro, com um toque moderno */
+  color: white;
+}
+
+footer a {
+  color: #ecf0f1; /* Um tom suave de cinza para links */
+}
+
+footer a:hover {
+  color: #3498db; /* Azul claro para hover */
 }
 
 @media (max-width: 768px) {
