@@ -1,10 +1,9 @@
-// Variáveis para cores com tom escuro e azul
-$cor-fundo-escuro: #121212;      // Fundo escuro (modo dark)
-$cor-azul-escuro: #1f2a44;       // Azul escuro suave para destacar elementos
-$cor-azul-claro: #3e5c76;        // Azul médio para botões e interações
-$cor-texto-claro: #e0e0e0;       // Texto claro para boa legibilidade
-$cor-destaque: #4f77a2;          // Azul suave para destaques
-$padding-section: 4rem 2rem;      // Padding das seções
+$cor-fundo-escuro: #121212;     
+$cor-azul-escuro: #0a1f34;      
+$cor-azul-claro: #1e3a55;       
+$cor-destaque: #3a73a8;          
+$cor-texto-claro: #f1f1f1;      
+$padding-section: 4rem 2rem;      
 
 // Estilos gerais de seção
 .section {
@@ -13,38 +12,36 @@ $padding-section: 4rem 2rem;      // Padding das seções
   align-items: center;
   justify-content: center;
   color: $cor-texto-claro;
-  background-color: $cor-fundo-escuro; // Fundo escuro geral (modo dark)
+  background-color: $cor-fundo-escuro; 
 
   .conteudo {
     max-width: 600px;
     padding: 2rem;
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.7); // Sobreposição escura para destacar o conteúdo
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Sombras suaves para profundidade
+    background-color: rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
   }
 }
 
-// Seção alinhada à esquerda (azul escuro suave)
 .esquerda {
-  background-color: $cor-azul-escuro; // Azul escuro suave para a seção da esquerda
-  justify-content: flex-start; // Alinhado à esquerda
+  background-color: $cor-azul-escuro; 
+  justify-content: flex-start; 
   .conteudo {
     text-align: left;
   }
 }
 
-// Seção alinhada à direita (azul médio suave)
+
 .direita {
-  background-color: $cor-azul-claro; // Azul médio suave para a seção da direita
-  justify-content: flex-end; // Alinhado à direita
+  background-color: $cor-azul-claro; 
+  justify-content: flex-end; 
   .conteudo {
     text-align: right;
   }
 }
 
-// Estilo de botões e links
 .btn-primaria {
-  background-color: $cor-destaque; // Azul suave para os botões
+  background-color: $cor-destaque; 
   color: $cor-texto-claro;
   border: none;
   padding: 0.8rem 2rem;
@@ -53,11 +50,50 @@ $padding-section: 4rem 2rem;      // Padding das seções
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $cor-azul-claro; // Azul médio para hover
+    background-color: $cor-azul-claro; 
   }
 }
 
-// Ajuste responsivo para telas menores
+.rounded-custom {
+  border: 8px solid #b0c4de;  
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+
+.rounded-custom-carousel {
+  border: 8px solid #b0c4de;  
+}
+
+
+
+.image-hero {
+  margin-top: 2%;
+}
+
+.modal-title {
+  color: black;
+}
+
+.card-title {
+  color: black;
+}
+
+.card-text {
+  color: black;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  bottom:0;
+  z-index: 1;
+}
+
 @media (max-width: 768px) {
   .section {
     flex-direction: column;
@@ -65,6 +101,9 @@ $padding-section: 4rem 2rem;      // Padding das seções
     .conteudo {
       text-align: center;
       max-width: 100%;
+    }
+    .carousel-control-prev, .carousel-control-next {
+      z-index: 2;
     }
   }
 }
